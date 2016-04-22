@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>正在处理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/add.css" />
+<script type="text/javascript" src="__PUBLIC__/js/add.js"></script>
+</head>
+<body onload="refreshtask()">
+<script>
+	function wait(){
+		document.getElementById('load').style.display='block';
+	}
+	function change(){
+		alert('用户还未清洗的任务可以修改');
+	}
+	function refreshtask(){
+		window.setInterval("loadXMLDoc()",1000);
+		/*window.setInterval("change()",3000);*/
+	}
+	function loadXMLDoc(){
+		/*
+		alert(111);
+		alert("__URL__");
+		*/
+			var xmlhttp;
+			if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+		    	xmlhttp=new XMLHttpRequest();
+			}else{// code for IE6, IE5
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+				xmlhttp.onreadystatechange=function(){
+					    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+							if(xmlhttp.responseText!=0){
+							    document.getElementById("tasktable").innerHTML=xmlhttp.responseText;
+							}
+						}
+				}
+				xmlhttp.open("POST","http://192.168.1.193/PC/index.php/home/index/refresh",true);
+				xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xmlhttp.send("func=refresh");
+	}
+</script>
+	<div class="main">
+		<div class="item">正在处理</div><br/>
+			<div id="tasktable" style="float:left;margin-left:100px;margin-top:0px;">
+				<{$taskitems}>
+			</div>
+		</div>
+	</div>
+	<div class="foot" style="float:left;width:100%;height:60px;">
+	</div>
+</body>
+</html>

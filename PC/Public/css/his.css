@@ -1,0 +1,22 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-image: url("../images/his.jpg");
+	
+}
+.main{
+	margin:0 auto;
+	height:100%;
+}
+.item{
+	float:left;
+	margin-top:30px;
+	margin-left:30px;
+	margin-bottom:10px;
+	font-size:0.7cm;
+	color: #FFFFFF;
+}
+.upload{
+	margin-left:30px;
+	color: #FFFFFF;
+}

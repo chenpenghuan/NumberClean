@@ -1,0 +1,110 @@
+body{
+	padding:0;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	background:#fff;
+	position:relative;
+}
+body a{
+    transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+#head{
+  background-color: #188ECA;
+}
+a:hover{
+ text-decoration:none;
+}
+.box {
+    width:100%;
+    background:#fff;
+    margin:0;
+    border-radius:2px;
+}
+.css3-shadow{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.css3-shadow:after{
+   content: "";
+}
+/*-------------*/
+.logo{
+  float: left;
+  width: 25.5%;
+  margin: 1.2em 0em 1.2em 0em;
+}
+/* start h_menu */
+.top-header {
+	margin-top: 1.5em;
+}
+nav.top-nav {
+	float: left;
+}
+.h_menu4{
+	float:left;
+}
+a.toggleMenu {
+  display: none;
+}
+.logo a{
+	display:block;
+}
+.logo img{
+  width: 172px;
+}
+.social_icons{
+	float:right;
+	  margin-top: 2em;
+}
+.social_icons i {
+  width:26px;
+  height:26px;
+  background: url('../images/s-icons.png') no-repeat 0px 0px;
+  display: inline-block;
+}
+.social_icons  li {
+list-style:none;
+display:inline-block;
+}
+i.facebook {
+  background-position: -241px -5px;
+}
+i.facebook:hover {
+  background-position: -241px -44px;
+}
+i.twitter{
+  background-position: -267px -5px;
+}
+i.twitter:hover {
+  background-position: -267px -44px;
+}
+i.rss{
+  background-position: -293px -5px;
+}
+i.rss:hover{
+  background-position: -293px -44px;
+}
+
+i.viemo{
+  background-position: -318px -5px;
+}
+i.viemo:hover{
+  background-position: -318px -44px;
+}
+i.youtube{
+  background-position: -341px -5px;
+}
+i.youtube:hover{
+  background-position: -341px -44px;
+}
+i.linkedin{
+  background-position: -368px -5px;
+}
+i.linkedin:hover{
+  background-position: -368px -44px;
+}

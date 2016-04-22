@@ -1,0 +1,1 @@
+Think\Model:getAllRecord方法不存在！Think\Model:getAllRecord方法不存在！Think\Model:getAllRecord方法不存在！

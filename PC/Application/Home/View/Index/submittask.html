@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>创建任务</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/add.css" />
+<script type="text/javascript" src="__PUBLIC__/js/add.js"></script>
+</head>
+<body>
+<script>
+	function wait(){
+		document.getElementById('load').style.display='block';
+	}
+</script>
+	<div class="main">
+		<div class="item">创建任务</div><br/>
+		<div class="upload">
+			<form method="post" id="frm_add" action="__URL__/fileupload" enctype="multipart/form-data">
+				<a style="text-align:center" href="javascript:;" class="file">选择文件
+					<input type="file" name="file[]" id="file" multiple="multiple" >
+				</a>
+				<ul id="fileList">
+				</ul>
+				<div>
+					请选择任务优先级:
+				</div>
+				<div><select name="tasklevel" style="width:100px;height:30px;margin-bottom:30px;font-size:0.4cm;border:1px solid gray;"><option value="0" selected=1>0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
+				</div>
+				<div id="load" style="margin-left:40px;margin-top:25px;display:none;">
+					<p style="margin-left:-100px;">文件正在导入，请勿关闭窗口...</p>
+					<img src="__PUBLIC__/images/load.gif" />
+				</div>
+				<div class="box">
+					<input type="submit" onclick="wait()" name="sub" value="提交">
+				</div>
+			</form>
+		</div>
+		<div class="msg" style="margin-top:40px;padding-left:20%;width:95%;height:50px;word-break:break-all;" id="msg">
+			<{$msg}>
+		</div>
+		<div style="margin-top:20px;margin-left:100px;width:80%;word-break:break-all;">
+			<{$upinfo}>
+		</div>
+	</div>
+</body>
+</html>

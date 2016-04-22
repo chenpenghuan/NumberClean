@@ -1,0 +1,89 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font:12px/1.5 'Montserrat';
+	/*color:#F5F5F5;*/
+	/*background-image: url("../images/filt.jpg");*/
+}
+ul,li{ list-style:none;}
+img{border:0 none;}
+
+/* input style */
+.box input {
+	float: right;
+	padding: 0;
+	width: 80px;
+	margin-right:200px;
+	height: 30px;
+	border: 1px solid black;
+    background:#F2F2F2;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}/*
+.box input:hover {
+	border: 2px solid #1ECD97;
+	background-color: #1ECD97;
+	color: #fff;
+}
+
+.box input:focus {
+	outline: none;
+}
+*/
+/* Text (transition for when returning to initial state) */
+.box input span {
+	-webkit-transition: opacity 0.3s 0.1s;
+	transition: opacity 0.3s 0.1s;
+}
+
+/* Common style of SVGs */
+.box svg {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.box svg path {
+	opacity: 0;
+	fill: none;
+}
+
+.box svg.progress-circle path {
+	stroke: #1ECD97;
+	stroke-width: 5;
+}
+
+.box svg.checkmark path,
+.box svg.cross path {
+	stroke: #fff;
+	stroke-linecap: round;
+	stroke-width: 4;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+.item{
+	height:100%;
+	margin-left:30px;
+	margin-top:30px;
+	margin-bottom:10px;
+	font-size:0.7cm;
+}
+
+.download{
+	float:left;
+	margin-left:30px;
+	font-size:0.5cm;
+}
+.download a{
+	color:red;
+}
+#wait{
+	float:left;
+}

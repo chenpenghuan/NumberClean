@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>用户登录</title>
+	<style>
+		body{
+			padding:0px;
+			margin:0px;
+			background:url(__PUBLIC__/images/login_back.png);
+			background-size:100%;
+			background-repeat:no-repeat;
+		}
+		.main{
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:400px;
+			height:230px;
+			margin-left:-15%;
+			margin-top:-12%;
+			padding-top:10px;
+			background:#0079BE;
+			text-align:center;
+			-moz-border-radius: 15px;
+			-webkit-border-radius: 15px;
+			border-radius:15px;
+			border:2px solid white;
+		}
+		.item{
+			float:left;
+			margin-top:5px;
+			width:100%;
+			height:30px;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+<script>
+	function newgdcode(obj,url){
+		obj.src=url+'?nowtime='+new Date().getTime();
+	}
+</script>
+	<div class="main">
+	<form action="__URL__/login" method="post">
+		<div class="item" style="font-size:0.5cm">用户登录</div>
+		<div class="item"><label>账号:&nbsp;</label><input type="text" name="username" /></div>
+		<div class="item"><label>密码:&nbsp;</label><input type="password" name="password" /></div>
+		<div class="item"  style="margin-left:-8px;"><label>验证码:&nbsp;</label><input type="text" name="code" /></div>
+		<div class="item">&nbsp;<img src="__URL__/check" alt="看不清楚,换一张" width="145px" height="25px" style="cursor:pointer;margin-left:35px;" onclick="javascript:newgdcode(this,this.src);" /></div>
+		<input type="submit" name="sub" style="margin-left:40px;" value="登录" />
+		<input type="reset" style="margin-left:20px;" value="重置" />
+	<form>
+	</div>
+</body>
+</html>
