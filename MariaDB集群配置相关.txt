@@ -1,0 +1,12 @@
+1.安装MariaDB:yum install -y mariadb mariadb-galera-server mariadb-galera-common galera rsync
+2.设置mysql随机自启:systemctl enable mysql
+  设置mysql密码systemctl start mysql
+			   mysqladmin -uroot password '123123'
+3.修改配置文件:cp /usr/share/mysql/wsrep.cnf /etc/my.cnf.d/
+  vi /etc/my.cnf.d/wsrep.cfg
+  修改以下四行
+  wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+  wsrep_cluster_address="gcomm://" #主节点不必修改,子节点为"gcomm://master",其中master是主节点
+  wsrep_sst_auth=root:password #其中root是mariadb用户名,password是该用户名对应密码
+  wsrep_sst_method=rsync
+4.登陆MariaDB,键入show status like 'wsrep_%';回车，若wsrep_cluster_size的值大于1,则集群配置成功，若节点数不对，请检查单个节点的配置
